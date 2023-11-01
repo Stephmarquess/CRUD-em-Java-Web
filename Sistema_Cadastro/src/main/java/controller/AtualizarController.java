@@ -20,15 +20,14 @@ public class AtualizarController extends HttpServlet {
        
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int id = Integer.parseInt(request.getParameter("id"));
-		
+		int idcliente = Integer.parseInt(request.getParameter("id"));
 		
 		try {
-			
+				
 			ClienteDAO clienteDAO = new ClienteDAO();
-			Cliente cliente = clienteDAO.findClient(id);
+			Cliente clienteAtualizar = clienteDAO.findClient(idcliente);
 			
-			request.setAttribute("clientes", cliente);
+			request.setAttribute("clientes", clienteAtualizar);
 			
 			RequestDispatcher rd = request.getRequestDispatcher("atualizarcliente.jsp");
 			rd.forward(request, response);
@@ -47,16 +46,22 @@ public class AtualizarController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		try {
+						
 			Cliente cliente = new Cliente();
-			cliente.setId(Integer.parseInt(request.getParameter("id")));
+			
+			int idcliente = Integer.parseInt(request.getParameter("id"));
+			
+			cliente.setId(idcliente);
 			cliente.setNome(request.getParameter("nome"));
 			cliente.setDataNasc(LocalDate.parse(request.getParameter("dataNasc")));
 			cliente.setUsuario(request.getParameter("usuario"));
-			cliente.setSenha(request.getParameter("senha"));		
+			cliente.setSenha(request.getParameter("senha"));			
 			
 			
 			ClienteDAO clienteDAO = new ClienteDAO();
 			clienteDAO.updateClient(cliente);
+			
+			request.setAttribute("clientes", clienteDAO.findClient(idcliente));
 			
 			response.sendRedirect("LerController");
 		} catch (Exception e) {

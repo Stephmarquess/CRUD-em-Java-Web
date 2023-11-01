@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <title> Atualizar Cliente </title>
 </head>
 <body>
@@ -13,42 +15,28 @@
 </header>
 
 <main> 
-
+<p class="mt-5 fs-1 text-center" > Atualizar Cliente </p>
 <div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-6">
-				<h1 class="mt-5" > Atualizar Cliente </h1>
+		<div class="rowjustify-content-center">
+			<div class="col-md-6">				
 				
-				<form class="mt-5" action="AtualizarController" method="post">
-				
-				<div class="form-group">
-						<label for="nome"> ID:</label> <input type="text"
-							class="form-control" id="id" name="id" value="${clientes.id}" readonly>
-					</div>
+				<form action="AtualizarController" method="post">
 					
-					<div class="form-group">
-						<label for="nome"> Nome: </label> <input type="text"
-							class="form-control" id="nome" name="nome" value="${clientes.nome}" required>
-					</div>
-					
-					<div class="form-group">
-						<label for="login"> Data de Nascimento:</label> <input type="date"
-							class="form-control" id="dataNasc" name="dataNasc" value="${clientesdataNasc}" required>
-					</div>
-					
-					<div class="form-group">
-						<label for="senha"> Usuário/Login</label> <input type="email"
-							class="form-control" id="email" name="senha" value="${clientes.usuario}" required>
-					</div>
-					
-					<div class="form-group">
-						<label for="dataNascimento"> Senha </label> <input
-							type="password" value="${clientes.senha}" class="form-control" id="date"
-							name="dataNasc" required>
-					</div>
-					
-					<button type="submit" class="btn btn-primary"> Atualizar </button>
-				</form>
+					<label for="id">ID do Cliente: </label>
+					<input type="text" name="id" value="${clientes.id}" readonly>
+					<label for="nome">Nome Completo</label>
+					<input type="text" name="nome" value="${clientes.nome}" required>
+					<label for="dataNasc">Data de Nascimento</label>
+					<input type="date" name="dataNasc"  value="${clientes.dataNasc}" required>
+					<label for="usuario">Usuário</label>
+					<input type="email" name="usuario"  value="${clientes.usuario}" required >
+					<label for="senha">Senha</label>
+					<input type="password" name="senha"  value="${clientes.senha}" required>
+<div> 
+<button type="submit" class="btn btn-primary" > Cadastrar </button>
+</div>
+</form>
+
 			</div>
 		</div>
 	</div>
