@@ -14,18 +14,19 @@ import javax.servlet.http.HttpServletResponse;
 import dao.ClienteDAO;
 import model.Cliente;
 
-@WebServlet("/Lerontroller")
+@WebServlet("/LerController")
 
 public class LerController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		try {
 			
 			ClienteDAO clienteDAO = new ClienteDAO();
-			List<Cliente> clients = clienteDAO.findClients();
-			request.setAttribute("clients", clients);
+			List<Cliente> clientes = clienteDAO.ListClients();
+			request.setAttribute("clientes", clientes);
 			
 			RequestDispatcher rd = request.getRequestDispatcher("listarcliente.jsp");
 			rd.forward(request, response);

@@ -80,39 +80,42 @@ public class ClienteDAO {
 		return client;
 	}
 	
-	public List<Cliente> findClients() {
+	public List<Cliente> ListClients() {
 
 		String sql = "SELECT * FROM Clientes";
 
-		List<Cliente> clients = new ArrayList<Cliente>();
+		List<Cliente> clientes = new ArrayList<Cliente>();
 
-		ResultSet r = null;
+		ResultSet rs = null;
 
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-			r = stmt.executeQuery();
+			rs = stmt.executeQuery();
 
-			while (r.next()) {
+			while (rs.next()) {
 				Cliente cliente = new Cliente();
-				cliente.setId(r.getInt("id"));
-				cliente.setNome(r.getString("nome"));
-				cliente.setDataNasc(r.getDate("dataNasc").toLocalDate());
-				cliente.setUsuario(r.getString("usuario"));
-				cliente.setSenha(r.getString("senha"));
+				
+				cliente.setId(rs.getInt("id"));
+				cliente.setNome(rs.getString("nome"));
+				cliente.setDataNasc(rs.getDate("dataNasc").toLocalDate());
+				cliente.setUsuario(rs.getString("usuario"));
+				cliente.setSenha(rs.getString("senha"));
 
-				clients.add(cliente);
+				clientes.add(cliente);
 			}
 		} catch (Exception e) {
 
 			e.printStackTrace();
 
 		}
-		return clients;
+		return clientes;
 
 	}
 
 	public void updateClient(Cliente cliente) {
 		sql = "UPDATE Clientes SET nome = ?, dataNasc = ?, usuario = ?, senha = ? WHERE id = ?";
+		
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+			
 			Date sqlDate = Date.valueOf(cliente.getDataNasc());
 			
 			stmt.setString(1, cliente.getNome());

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,13 +18,13 @@
 
 <form action="CriarController" method="post">
 
-<p class="fs-6 fw-bolder"> Nome Completo </p>
+<label for="nome">Nome Completo</label>
 <input type="text" name="nome">
-<p class="fs-6 fw-bolder"> Data de Nascimento </p>
+<label for="dataNasc">Data de Nascimento</label>
 <input type="date" name="dataNasc">
-<p class="fs-6 fw-bolder"> Usuário </p>
+<label for="usuario">Usuário</label>
 <input type="email" name="usuario">
-<p class="fs-6 fw-bolder"> Senha </p>
+<label for="senha">Senha</label>
 <input type="password" name="senha">
 
 <div> 

@@ -15,29 +15,32 @@ import dao.ClienteDAO;
 import model.Cliente;
 
 @WebServlet("/AtualizarController")
-
 public class AtualizarController extends HttpServlet {
-	private static final long serialVersionUID = 1L;   
+	private static final long serialVersionUID = 1L;
+       
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-				
+		
+		
 		try {
-			ClienteDAO cDAO = new ClienteDAO();
-			Cliente cliente = cDAO.findClient(id);
 			
-			request.setAttribute("client", cliente);
+			ClienteDAO clienteDAO = new ClienteDAO();
+			Cliente cliente = clienteDAO.findClient(id);
 			
-			RequestDispatcher rd = request.getRequestDispatcher("atualizar.jsp");
-			rd.forward(request, response);			
+			request.setAttribute("clientes", cliente);
+			
+			RequestDispatcher rd = request.getRequestDispatcher("atualizarcliente.jsp");
+			rd.forward(request, response);
+			
 			
 			
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
 		}
-						
+		
+		
 	}
 
 	
@@ -49,17 +52,16 @@ public class AtualizarController extends HttpServlet {
 			cliente.setNome(request.getParameter("nome"));
 			cliente.setDataNasc(LocalDate.parse(request.getParameter("dataNasc")));
 			cliente.setUsuario(request.getParameter("usuario"));
-			cliente.setSenha(request.getParameter("senha"));
-					
+			cliente.setSenha(request.getParameter("senha"));		
+			
 			
 			ClienteDAO clienteDAO = new ClienteDAO();
 			clienteDAO.updateClient(cliente);
 			
 			response.sendRedirect("LerController");
-		
 		} catch (Exception e) {
 			
-		}	
+		}
 		
 		
 		
