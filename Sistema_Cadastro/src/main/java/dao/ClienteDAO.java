@@ -14,7 +14,7 @@ import model.Cliente;
 public class ClienteDAO {
 
 	private Connection connection;
-	private String sql;
+	
 
 	public ClienteDAO() throws SQLException {
 		connection = ConnectionDatabase.createConnection();
@@ -31,7 +31,7 @@ public class ClienteDAO {
 	}
 
 	public void createClient(Cliente cliente) {
-		sql = "INSERT INTO Clientes (nome,dataNasc,usuario,senha) VALUES (?,?,?,?)";
+		String sql = "INSERT INTO Clientes (nome,dataNasc,usuario,senha) VALUES (?,?,?,?)";
 
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 
@@ -53,9 +53,9 @@ public class ClienteDAO {
 	}
 
 	public Cliente findClient(int id) {
-		Cliente client = null;
+		Cliente cliente = null;
 		
-		sql = "SELECT * FROM Clientes WHERE id=?";
+		String sql = "SELECT * FROM Clientes WHERE id = ?";
 
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 
@@ -64,20 +64,21 @@ public class ClienteDAO {
 			ResultSet r = stmt.executeQuery();
 
 			if (r.next()) {
-				Cliente cliente = new Cliente();
-				cliente.setId(r.getInt("id"));
-				cliente.setNome(r.getString("nome"));
-				cliente.setDataNasc(r.getDate("dataNasc").toLocalDate());
-				cliente.setUsuario(r.getString("usuario"));
-				cliente.setSenha(r.getString("senha"));
+				Cliente c = new Cliente();
+				c.setId(r.getInt("id"));
+				c.setNome(r.getString("nome"));
+				c.setDataNasc(r.getDate("dataNasc").toLocalDate());
+				c.setUsuario(r.getString("usuario"));
+				c.setSenha(r.getString("senha"));
 			
+				return c;
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		return client;
+		return cliente;
 	}
 	
 	public List<Cliente> ListClients() {
@@ -109,11 +110,11 @@ public class ClienteDAO {
 
 		}
 		return clientes;
-
+		
 	}
 
 	public void updateClient(Cliente cliente) {
-		sql = "UPDATE Clientes SET nome = ?, dataNasc = ?, usuario = ?, senha = ? WHERE id = ?";
+		String sql = "UPDATE Clientes SET nome = ?, dataNasc = ?, usuario = ?, senha = ? WHERE id = ?";
 		
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 			
@@ -135,7 +136,7 @@ public class ClienteDAO {
 	}
 
 	public void deleteClient(int id) {
-		sql = "DELETE FROM Clientes WHERE id = ?";
+		String sql = "DELETE FROM Clientes WHERE id = ?";
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 			stmt.setInt(1, id);
 			stmt.executeUpdate();

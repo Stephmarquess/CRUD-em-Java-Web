@@ -21,21 +21,19 @@ public class LerController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		try {			
+
+		try {
 			
 			ClienteDAO clienteDAO = new ClienteDAO();
 			List<Cliente> clientes = clienteDAO.ListClients();
 			request.setAttribute("clientes", clientes);
-			
+
 			RequestDispatcher rd = request.getRequestDispatcher("listarcliente.jsp");
 			rd.forward(request, response);
 
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 
 	}
 

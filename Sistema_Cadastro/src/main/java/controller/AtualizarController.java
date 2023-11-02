@@ -24,15 +24,16 @@ public class AtualizarController extends HttpServlet {
 		
 		try {
 				
-			ClienteDAO clienteDAO = new ClienteDAO();
-			Cliente clienteAtualizar = clienteDAO.findClient(idcliente);
+			ClienteDAO clienteDAO = new ClienteDAO();				
+			Cliente atualizarCliente = clienteDAO.findClient(idcliente);
 			
-			request.setAttribute("clientes", clienteAtualizar);
+			request.setAttribute("cliente", atualizarCliente);
 			
 			RequestDispatcher rd = request.getRequestDispatcher("atualizarcliente.jsp");
-			rd.forward(request, response);
+			rd.forward(request, response);			
 			
-			
+			System.out.println(idcliente);
+			System.out.println(atualizarCliente);
 			
 		} catch (SQLException e) {
 			
@@ -61,9 +62,12 @@ public class AtualizarController extends HttpServlet {
 			ClienteDAO clienteDAO = new ClienteDAO();
 			clienteDAO.updateClient(cliente);
 			
-			request.setAttribute("clientes", clienteDAO.findClient(idcliente));
 			
 			response.sendRedirect("LerController");
+			
+	
+			
+			
 		} catch (Exception e) {
 			
 		}

@@ -19,6 +19,8 @@ public class CriarController extends HttpServlet {
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setCharacterEncoding("UTF-8");
+		
 		Cliente cliente = new Cliente ();
 		
 		cliente.setNome(request.getParameter("nome"));
