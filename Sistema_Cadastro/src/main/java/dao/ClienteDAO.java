@@ -95,13 +95,14 @@ public class ClienteDAO {
 				Cliente cliente = new Cliente();
 				
 				cliente.setId(rs.getInt("id"));
-				cliente.setUsuario(rs.getString("usuario"));				
-				cliente.setDataNasc(rs.getDate("dataNasc").toLocalDate());
 				cliente.setNome(rs.getString("nome"));
+				cliente.setDataNasc(rs.getDate("dataNasc").toLocalDate());
+				cliente.setUsuario(rs.getString("usuario"));
 				cliente.setSenha(rs.getString("senha"));
 
 				clientes.add(cliente);
-			}
+			} 
+			
 		} catch (Exception e) {
 
 			e.printStackTrace();

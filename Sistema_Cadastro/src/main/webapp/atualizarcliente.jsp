@@ -58,7 +58,7 @@
 
 	</main>
 
-	<footer class="d-flex-columns text-center text-white bg-dark">
+	<footer class="d-flex-columns text-center text-white bg-dark fixed-bottom">
 		<p class="mt-5">Desenvolvido por: Stéfany Marques</p>
 		<a href="https://github.com/Stephmarquess"
 			class="text-decoration-none text-white"><i class="bi bi-github"></i>
