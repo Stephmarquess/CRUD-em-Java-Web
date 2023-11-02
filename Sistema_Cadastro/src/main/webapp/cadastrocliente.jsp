@@ -35,7 +35,9 @@
 <label for="senha"><strong>Senha</strong></label>
 <input type="password" class="form-control mb-3" name="senha">
 
-<div class="mt-3 d-flex justify-content-center"> 
+<div class="mt-3 d-flex justify-content-center gap-3"> 
+<a href="index.html"> 
+<button type="button" class="btn btn-primary" > <i class="bi bi-arrow-left-circle"></i> Voltar </button></a>
 <button class="btn btn-primary"> Cadastrar </button>
 </div>
 </form>

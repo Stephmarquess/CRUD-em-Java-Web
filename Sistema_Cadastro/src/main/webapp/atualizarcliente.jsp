@@ -45,8 +45,8 @@
 							Senha</label> <input type="password" class="form-control mb-3"
 							name="senha" value="${clientes.senha}" required>
 						<div class="d-flex justify-content-center gap-3">
-							<a href="listarcliente.jsp"> 
-							<button type="submit" class="btn btn-primary" > <i class="bi bi-arrow-left-circle"></i> Voltar </button></a>
+							<a href="LerController"> 
+							<button type="button" class="btn btn-primary" > <i class="bi bi-arrow-left-circle"></i> Voltar </button></a>
 							<button type="submit" class="btn btn-primary">
 								Cadastrar</button>
 						</div>
