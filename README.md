@@ -13,10 +13,10 @@ USE registros;
 
 CREATE TABLE Clientes (
   
-  id INTEGER PRIMARY KEY AUTO_INCREMENT,
-  nome VARCHAR (100) NOT NULL, 
-  dataNasc DATE NOT NULL, 
-  usuario VARCHAR (50) NOT NULL,
-  senha VARCHAR (50) NOT NULL
+  id INTEGER PRIMARY KEY AUTO_INCREMENT, <br>
+  nome VARCHAR (100) NOT NULL, <br>
+  dataNasc DATE NOT NULL, <br>
+  usuario VARCHAR (50) NOT NULL, <br>
+  senha VARCHAR (50) NOT NULL <br>
     
   )
