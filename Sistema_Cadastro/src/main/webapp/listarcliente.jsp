@@ -2,29 +2,41 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<title>Go Tour - Listar Clientes </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<title> Área do Administrador - Clientes </title>
 </head>
 <body>
-	<h1 class="mt-5">Clientes</h1>
-	<div class="container mt-5">
-	<a href="./cadastrocliente.jsp" class="btn btn-primary mb-5">Criar novo</a>
-		<table class="table table-bordered">
-			<thead>
+	<header>
+		<nav class="navbar navbar-expand-lg bg-dark text-body-light">
+			<div class="container-fluid d-flex justify-content-center">
+				<a class="navbar-brand" href="#"><img src="./img/cadastro.png" height="100px"/></a>			
+			</div>
+		</nav>
+
+	</header>
+	<h1 class="mt-3 text-center" >Clientes</h1>
+	<div class="container mt-3">
+	<div class="float-end">
+	<a href="./cadastrocliente.jsp" class="btn btn-primary mb-5"> <i class="bi bi-plus-circle-fill"></i> Novo Cliente</a>
+	</div>
+		<table class="table shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+			<thead class="table-dark text-center">
 				<tr>
 					<th> ID</th>
 					<th> Nome</th>
 					<th> Data de Nascimento</th>
 					<th> Usuario</th>
 					<th> Senha </th>
+					<th> Opções </th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach items="${clientes}" var="clientes">
-					<tr>					   
+					<tr class="text-center">					   
 						<td>${clientes.id}</td>
 						<td>${clientes.nome}</td>
 						<td>${clientes.dataNasc}</td>
@@ -40,6 +52,11 @@
 			</tbody>
 		</table>
 	</div>
+	
+	<footer class="d-flex-columns text-center text-white bg-dark">
+		<p class="mt-5">Desenvolvido por: Stéfany Marques</p>
+		<a href="https://github.com/Stephmarquess" class="text-decoration-none text-white"><i class="bi bi-github"></i> GitHub</a>
+	</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

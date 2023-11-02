@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<title> GoTour - Área Administrador </title>
+	<meta charset="UTF-8">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title> Área Administrador </title>
 </head>
+
 <body>
-	<button class="btn btn-primary"> Cadastrar Cliente </button>
-	<button class="btn btn-primary"> Atualzar </button>
-	<button class="btn btn-primary"> Deletar Cliente </button>
+		<header>
+		<nav class="navbar navbar-expand-lg bg-dark text-body-light">
+			<div class="container-fluid d-flex justify-content-center">
+				<a class="navbar-brand" href="#"><img src="./img/cadastro.png" height="100px"/></a>			
+			</div>
+		</nav>
+	</header>
+	
+	<main class="container">
+		<div class="d-flex justify-content-center g-5 mt-3">
+			<div class="p-3 mb-5 bg-body-tertiary rounded text-center">
+				<a href="cadastrocliente.jsp"><img src="./img/cadastrar.png" height="150px"/>
+				<p class="fs-5 fw-bolder mt-3"> Cadastrar Clientes </p>
+			</a>
+			</div>
+			<div class="p-3 mb-5 bg-body-tertiary rounded d-flex-columns me-5 text-center">
+				<a href="listarcliente.jsp"> <img src="./img/listarc.png" height="150px" />
+				<p class="fs-5 fw-bolder mt-3"> Listar Clientes </p>
+			</a>
+			</div>
+		</div>
+	</main>
+
+	<footer class="d-flex-columns text-center bg-dark">
+		<p>Desenvolvido por: Stéfany Marques</p>
+		<a href="https://github.com/Stephmarquess"> GitHub </a>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

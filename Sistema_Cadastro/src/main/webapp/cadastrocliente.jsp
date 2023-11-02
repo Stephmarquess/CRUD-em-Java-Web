@@ -5,37 +5,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <title> Gotour - Cadastro de Cliente</title>
 </head>
 <body>
 
 <header> 
-
+<nav class="navbar navbar-expand-lg bg-dark text-body-light">
+			<div class="container-fluid d-flex justify-content-center">
+				<img src="./img/cadastro.png" height="100px"/><			
+			</div>
+		</nav>
 </header>
 
 <main class="container"> 
-<p class="fs-1 text-center"> Cadastro de Cliente </p>
 
+<p class="fs-1 text-center mt-3"> Cadastro de Cliente </p>
+
+<div class="shadow p-3 mb-5 bg-body-tertiary rounded"> 
 <form action="CriarController" method="post">
 
-<label for="nome">Nome Completo</label>
-<input type="text" name="nome">
-<label for="dataNasc">Data de Nascimento</label>
-<input type="date" name="dataNasc">
-<label for="usuario">Usuário</label>
-<input type="email" name="usuario">
-<label for="senha">Senha</label>
-<input type="password" name="senha">
+<label for="nome"><strong>Nome Completo</strong></label>
+<input type="text" class="form-control mb-3" name="nome">
+<label for="dataNasc"><strong>Data de Nascimento</strong></label>
+<input type="date" class="form-control mb-3" name="dataNasc">
+<label for="usuario"><strong>Usuário</strong></label>
+<input type="email" class="form-control mb-3" name="usuario">
+<label for="senha"><strong>Senha</strong></label>
+<input type="password" class="form-control mb-3" name="senha">
 
-<div> 
+<div class="mt-3 d-flex justify-content-center"> 
 <button class="btn btn-primary"> Cadastrar </button>
 </div>
-
 </form>
+</div>
 </main>
 
-<footer> 
+	<footer class="d-flex-columns text-center text-white bg-dark">
+		<p class="mt-5">Desenvolvido por: Stéfany Marques</p>
+		<a href="https://github.com/Stephmarquess" class="text-decoration-none text-white"><i class="bi bi-github"></i> GitHub</a>
+	</footer>
 
-</footer>
 </body>
 </html>
