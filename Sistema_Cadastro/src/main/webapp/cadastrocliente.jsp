@@ -10,7 +10,7 @@
 	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<title>Cadastro de Cliente</title>
+<title>Área de Administrador - Cadastro de Cliente</title>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 	<main class="container">
 
-		<p class="fs-1 text-center mt-3">Cadastro de Cliente</p>
+		<p class="fs-1 text-center mt-3">Área de Administrador - Cadastro de Cliente</p>
 
 <div>
 			<div class="row justify-content-center">

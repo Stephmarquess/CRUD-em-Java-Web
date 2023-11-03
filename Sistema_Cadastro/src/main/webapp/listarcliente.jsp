@@ -10,7 +10,7 @@
 	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<title>Área do Administrador - Clientes</title>
+<title> Área do Administrador - Clientes</title>
 </head>
 <body>
 	<header>
@@ -64,7 +64,7 @@
 		</div>
 	</div>
 
-	<footer class="text-center text-white bg-dark">
+	<footer class="text-center text-white bg-dark fixed-bottom">
 		<p class="py-3">Desenvolvido por: Stéfany Marques</p>
 		<a href="https://github.com/Stephmarquess"
 			class="text-decoration-none text-white"><i class="bi bi-github"></i>

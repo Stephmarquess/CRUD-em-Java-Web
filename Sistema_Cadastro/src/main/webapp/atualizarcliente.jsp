@@ -9,7 +9,7 @@
 	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<title>Atualizar Cliente</title>
+<title>Área de Administrador - Atualizar Cliente</title>
 </head>
 <body>
 
@@ -31,8 +31,11 @@
 
 					<form action="AtualizarController" method="post">
 
+						
 						<label for="id"> ID do Cliente: </label> 
-						<input class="form-control mb-3" name="id" value="${cliente.id}" readonly> 
+						<fieldset disabled>
+						<input class="form-control mb-3" name="id" value="${cliente.id}" readonly>
+						 </fieldset>
 						<label for="nome"> Nome: </label> 
 						<input type="text" class="form-control mb-3" name="nome" value="${cliente.nome}">
 						<label for="dataNasc"> Data de Nascimento: </label> 
@@ -44,10 +47,9 @@
 						
 							
 						<div class="d-flex justify-content-center gap-3">
-							<a href="LerController"> 
-							<button type="button" class="btn btn-dark" > <i class="bi bi-arrow-left-circle"></i> Voltar </button></a>
+							<a href="LerController"> <button type="button" class="btn btn-dark" > <i class="bi bi-arrow-left-circle"></i> Voltar </button></a>
 							<button type="submit" class="btn btn-dark">
-								Cadastrar</button>
+								Atualizar</button>
 						</div>
 					</form>
 
