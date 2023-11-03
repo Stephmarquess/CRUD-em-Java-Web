@@ -31,9 +31,7 @@ public class AtualizarController extends HttpServlet {
 			
 			RequestDispatcher rd = request.getRequestDispatcher("atualizarcliente.jsp");
 			rd.forward(request, response);			
-			
-			System.out.println(idcliente);
-			System.out.println(atualizarCliente);
+		
 			
 		} catch (SQLException e) {
 			
@@ -64,8 +62,6 @@ public class AtualizarController extends HttpServlet {
 			
 			
 			response.sendRedirect("LerController");
-			
-	
 			
 			
 		} catch (Exception e) {

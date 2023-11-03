@@ -30,6 +30,8 @@ public class LerController extends HttpServlet {
 
 			RequestDispatcher rd = request.getRequestDispatcher("listarcliente.jsp");
 			rd.forward(request, response);
+			
+			
 
 		} catch (SQLException e) {
 			e.printStackTrace();
