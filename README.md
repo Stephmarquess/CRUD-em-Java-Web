@@ -1,8 +1,6 @@
-# Sistema de Cadastro 
+# CRUD em Java Web 
 
-Sistema de cadastro simples modelado em MVC (Model, View, Controller) com Java e SGBD em MySQL. 
-
-Possui CRUD (Create, Read, Update, Delete) para registro, consulta, alterações e exclusão de dados.
+CRUD em Java Web simples para registro, consulta, alterações e exclusão de dados
 
 
 <h3> BANCO DE DADOS - MODELO FÍSICO (SQL) </h3>
