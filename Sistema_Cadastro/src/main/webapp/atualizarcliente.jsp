@@ -33,9 +33,9 @@
 
 						
 						<label for="id"> ID do Cliente: </label> 
-						<fieldset disabled>
+						
 						<input class="form-control mb-3" name="id" value="${cliente.id}" readonly>
-						 </fieldset>
+						 	
 						<label for="nome"> Nome: </label> 
 						<input type="text" class="form-control mb-3" name="nome" value="${cliente.nome}">
 						<label for="dataNasc"> Data de Nascimento: </label> 
@@ -48,8 +48,7 @@
 							
 						<div class="d-flex justify-content-center gap-3">
 							<a href="LerController"> <button type="button" class="btn btn-dark" > <i class="bi bi-arrow-left-circle"></i> Voltar </button></a>
-							<button type="submit" class="btn btn-dark">
-								Atualizar</button>
+							<button type="submit" class="btn btn-dark"> Atualizar</button>
 						</div>
 					</form>
 

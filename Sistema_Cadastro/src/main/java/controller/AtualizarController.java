@@ -59,7 +59,7 @@ public class AtualizarController extends HttpServlet {
 			
 			ClienteDAO clienteDAO = new ClienteDAO();
 			clienteDAO.updateClient(cliente);
-			
+		
 			
 			response.sendRedirect("LerController");
 			

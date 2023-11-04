@@ -24,7 +24,7 @@
 
 	<main class="container">
 
-		<p class="fs-1 text-center mt-3">Área de Administrador - Cadastro de Cliente</p>
+		<p class="fs-1 text-center mt-3"> Cadastro de Cliente</p>
 
 <div>
 			<div class="row justify-content-center">
