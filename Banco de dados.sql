@@ -1,0 +1,13 @@
+CREATE DATABASE registros;
+
+USE registros;
+
+CREATE TABLE Clientes (
+
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR (100) NOT NULL,
+dataNasc DATE NOT NULL,
+usuario VARCHAR (50) NOT NULL,
+telefone VARCHAR (50) NOT NULL
+
+)
