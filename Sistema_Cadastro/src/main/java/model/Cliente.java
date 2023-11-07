@@ -8,7 +8,7 @@ public class Cliente {
 	private String nome; 
 	private LocalDate dataNasc;
 	private String usuario;
-	private String senha;
+	private String telefone;
 	
 	
 	public Cliente() {
@@ -16,13 +16,13 @@ public class Cliente {
 
 	}
 	
-	public Cliente(int id, String nome, LocalDate dataNasc, String usuario, String senha) {
+	public Cliente(int id, String nome, LocalDate dataNasc, String usuario, String telefone) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.dataNasc = dataNasc;
 		this.usuario = usuario;
-		this.senha = senha;
+		this.telefone = telefone;
 	}
 	
 	public int getId() {
@@ -49,11 +49,11 @@ public class Cliente {
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
-	public String getSenha() {
-		return senha;
+	public String getTelefone() {
+		return telefone;
 	}
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
 	
 	

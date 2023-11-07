@@ -36,7 +36,7 @@
 					<th>Nome</th>
 					<th>Data de Nascimento</th>
 					<th>Usuario</th>
-					<th>Senha</th>
+					<th>Telefone</th>
 					<th>Opções</th>
 				</tr>
 			</thead>
@@ -47,10 +47,10 @@
 						<td>${clientes.nome}</td>
 						<td>${clientes.dataNasc}</td>
 						<td>${clientes.usuario}</td>
-						<td>${clientes.senha}</td>
+						<td>${clientes.telefone}</td>
 						<td><a href="AtualizarController?id=${clientes.id}"
 							class="btn btn-success"> Editar</a> <a
-							href="DeletarController?id=${clientes.id}" class="btn btn-danger"  onClick="confirmar()">Excluir</a>
+							href="DeletarController?id=${clientes.id}" class="btn btn-danger">Excluir</a>
 						</td>
 					</tr>
 				</c:forEach>
@@ -72,13 +72,7 @@
 			class="text-decoration-none text-white"><i
 			class="bi bi-envelope-fill"></i> E-mail </a>
 	</footer>
-	
-	<script>
-	
-	function confirmar () {
-		window.confirm("Deseja excluir este registro?");
-	}
-	</script>
+
 	
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

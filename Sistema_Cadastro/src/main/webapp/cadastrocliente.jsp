@@ -17,7 +17,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg bg-dark text-body-light">
 			<div class="container-fluid d-flex justify-content-center">
-				<img src="./img/cadastro.png" height="100px" /><
+				<img src="./img/cadastro.png" height="100px" />
 			</div>
 		</nav>
 	</header>
@@ -32,11 +32,11 @@
 				
 			<form action="CriarController" method="post">
 
-				<label for="nome"><strong>Nome Completo</strong></label> 
+				<label for="nome"><strong> Nome Completo</strong></label> 
 				<input
 					type="text" class="form-control mb-3" name="nome"> 
 					<label
-					for="dataNasc"><strong>Data de Nascimento</strong></label> 
+					for="dataNasc"><strong> Data de Nascimento</strong></label> 
 					<input
 					type="date" class="form-control mb-3" name="dataNasc"> 
 					<label
@@ -44,9 +44,9 @@
 					<input type="email"
 					class="form-control mb-3" name="usuario"> 
 					<label
-					for="senha"><strong>Senha</strong></label> 
-					<input type="password"
-					class="form-control mb-3" name="senha">
+					for="telefone"><strong>Telefone</strong></label> 
+					<input type="text"
+					class="form-control mb-3" name="telefone">
 
 				<div class="mt-3 d-flex justify-content-center gap-3">
 					<a href="index.html">

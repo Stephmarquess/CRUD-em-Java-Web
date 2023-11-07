@@ -54,7 +54,7 @@ public class AtualizarController extends HttpServlet {
 			cliente.setNome(request.getParameter("nome"));
 			cliente.setDataNasc(LocalDate.parse(request.getParameter("dataNasc")));
 			cliente.setUsuario(request.getParameter("usuario"));
-			cliente.setSenha(request.getParameter("senha"));			
+			cliente.setTelefone(request.getParameter("telefone"));			
 			
 			
 			ClienteDAO clienteDAO = new ClienteDAO();
