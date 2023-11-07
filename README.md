@@ -15,6 +15,6 @@ CREATE TABLE Clientes (
   nome VARCHAR (100) NOT NULL, <br>
   dataNasc DATE NOT NULL, <br>
   usuario VARCHAR (50) NOT NULL, <br>
-  senha VARCHAR (50) NOT NULL <br>
+  telefone VARCHAR (50) NOT NULL <br>
     
   )
