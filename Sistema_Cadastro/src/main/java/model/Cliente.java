@@ -11,6 +11,20 @@ public class Cliente {
 	private String senha;
 	
 	
+	public Cliente() {
+		super();
+
+	}
+	
+	public Cliente(int id, String nome, LocalDate dataNasc, String usuario, String senha) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.dataNasc = dataNasc;
+		this.usuario = usuario;
+		this.senha = senha;
+	}
+	
 	public int getId() {
 		return id;
 	}
